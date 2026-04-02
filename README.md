@@ -1,2 +1,2 @@
-# answer_keys_sem2_2526
-A repository for answer keys to the homeworks.
+# Semester 2 HW Answer Keys
+Each week has it's own folder.
