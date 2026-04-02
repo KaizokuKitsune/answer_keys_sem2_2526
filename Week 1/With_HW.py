@@ -1,7 +1,7 @@
 # Alex W.
 # Period: 6 & 7
 # Week 1 - With HW
-# Time Spent: 
+# Time Spent: ~1hr spent lke half of it dealing with tech problems or doomscrolling I will not lie
 
 """ #Multiline comment to make the entire code block nonfunctional
 # Part 1
