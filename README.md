@@ -14,3 +14,6 @@ Each week has it's own folder.
 ## Too Recent
 - Week 10
 - Week 11
+## Undecided
+- Group Project
+- Overkill Versions of HW
