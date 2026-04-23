@@ -1,0 +1,4 @@
+Operation: *
+Number 1: 5.0
+Number 2: 5.0
+Result: 25.0
