@@ -11,8 +11,8 @@ Each week has it's own folder.
 - Week 7 - Dictionaries
 - Week 8 - Schedule Helpwer
 - Week 8 - Pickle Practice
-## Too Recent
 - Week 10 - Dice
+## Too Recent
 - Week 11 - Working with Classes
 - Week 14 - Inheritance RPG Character
 ## Undecided
