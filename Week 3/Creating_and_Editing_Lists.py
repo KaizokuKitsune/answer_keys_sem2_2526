@@ -30,7 +30,7 @@ while edit.lower() != "y" and edit.lower() != "n":
 if edit.lower() == "y":
     try:
         while ref not in range(0,user_inputed_value-1):
-            ref = int(input("Enter the index of the value you wish to edit(0-{user_input_value-1}): "))
+            ref = int(input(f"Enter the index of the value you wish to edit(0-{user_input_value-1}): "))
             user_list[ref]
     except IndexError:
         print("Invalid Index.")
