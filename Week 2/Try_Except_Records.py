@@ -22,7 +22,7 @@ while True: # more input validation with try and except
     else: # this executes only if no errors are detected and breaks the while loop, this makes it so that theoretically only valid inputs make it out
         break 
 
-try: 
+try: # try handler for a secondary divide by zero protection
     if operation == "+":
         result = num1 + num2
     elif operation == "-":
@@ -39,7 +39,7 @@ except:
     print("An error has occured.")
 else:
     print(f"{num1} {operation} {num2} = {result}")
-    with open("outfile.txt","a") as outfile: # creates record in outfile
+    with open("Week 2/outfile.txt","a") as outfile: # creates record in outfile
         outfile.write(f'Operation: {operation}\n')
         outfile.write(f'Number 1: {num1}\n')
         outfile.write(f'Number 2: {num2}\n')
