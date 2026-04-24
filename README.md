@@ -2,8 +2,8 @@
 Each week has it's own folder.
 ## Done
 - Week 1 - With
-## In Progress
 - Week 2 - Try/Except & Records
+## In Progress
 - Week 3 - Creating & Edititing Lists
 - Week 4 - High Card Wins
 - Week 5 - Group HW: String Methods
@@ -14,6 +14,7 @@ Each week has it's own folder.
 ## Too Recent
 - Week 10 - Dice
 - Week 11 - Working with Classes
+- Week 14 - Inheritance RPG Character
 ## Undecided
 - Group Project
 - Overkill Versions of HW
