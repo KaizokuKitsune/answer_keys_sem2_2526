@@ -25,7 +25,7 @@ for i in range(5): # 5 card hand
 print(f'Your hand:')
 i = 1
 for card in user_hand:
-    print(f'{i} — {card[0]}{card[1]}') # fun fact: Em-Dash alt code is alt+0151
+    print(f'{i} — {card[1]}{card[0]}') # fun fact: Em-Dash alt code is alt+0151
     i+=1
 
 # Discard Portion
@@ -33,6 +33,7 @@ confirm = False
 discard = ""
 num_dis = 0
 dis_cards = []
+discard_cards = []
 while discard.lower() != "y" and discard.lower() != "n":
     discard = input("Would you like to discard up to 3 cards?")
 if discard.lower() == "y":
@@ -41,15 +42,43 @@ if discard.lower() == "y":
         temp_Deck = Deck # to preserve
         temp_hand = user_hand
         try:
-            while not confirm:                
+            while not confirm:
+                dis_cards = []   
+                num_dis = 0   
+                discard_cards = []          
                 while num_dis < 1 or num_dis > 3: # while cards to discard is not between 1 and 3 inclusive
                     num_dis = int(input("How many cards would you like to discard? "))
-                for x in range(1,num_dis+1):
-                    dis_cards.append(int(input(f"{x} of {num_dis} — Give the number (left of the dash) of the card you wish to discard")))
+                for x in range(1,num_dis+1): # for number of cards discarded
+                    dis_cards.append(int(input(f"{x} of {num_dis} — Give the number (left of the dash) of the card you wish to discard: ")))
                 print("The cards you have selected to discard:")
-                for spot in dis_cards:
-                    print(f"{spot} — {temp_hand[spot-1][0]}{temp_hand[spot-1][1]}")
+                for spot in dis_cards: # prints the cards to be discarded for the user to see
+                    print(f"{spot} — {temp_hand[spot-1][1]}{temp_hand[spot-1][0]}")
+                confirm_q = input('Would you like to confirm your choice(s)?(Y/N) ')
+                if confirm_q.lower() == "y": # if user confirms cards
+                    confirm = True
+                    for spot in dis_cards: # make a container for the cards to be removed
+                        discard_cards.append(temp_hand[spot-1])
+                    for card in discard_cards: # remove cards of values saved
+                        temp_hand.remove(card)
+                    while len(temp_hand) != 5: # add new cards until hand is full
+                        temp_hand.append(temp_Deck.pop())
         except:
-            continue
-        else:
+            continue # if error restart
+        finally:
+            user_hand = temp_hand
+            Deck = temp_Deck
+            print('Your new hand:')
+            i = 1
+            for card in user_hand:
+                print(f'{i} — {card[1]}{card[0]}')
+                i+=1
             break
+# Play Portion
+playstyle = 1
+rounds = 3
+# the only one required, I might add more
+if playstyle == 1: # the default one
+    for round in range(rounds):
+        user_card = []
+        comp_card = comp_hand.pop()
+        
