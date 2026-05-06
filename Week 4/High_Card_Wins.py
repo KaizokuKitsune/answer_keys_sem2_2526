@@ -35,7 +35,7 @@ num_dis = 0
 dis_cards = []
 discard_cards = []
 while discard.lower() != "y" and discard.lower() != "n":
-    discard = input("Would you like to discard up to 3 cards?")
+    discard = input("Would you like to discard up to 3 cards? ")
 if discard.lower() == "y":
     print("This will loop if you mess up so do please try and play nice.") # warning because this very rapidly exploded beyond necessary scope
     while True:
@@ -76,9 +76,45 @@ if discard.lower() == "y":
 # Play Portion
 playstyle = 1
 rounds = 3
+wins = 0
+loses = 0
+suits = ['♣','♦','♥','♠']
 # the only one required, I might add more
 if playstyle == 1: # the default one
     for round in range(rounds):
         user_card = []
         comp_card = comp_hand.pop()
-        
+        print('Your current hand:')
+        i = 1
+        for card in user_hand: # I have done this way to many times it should be a function
+            print(f'{i} — {card[1]}{card[0]}')
+            i+=1
+        while True:
+            try:
+                card_choice = int(input(f'Choose a number (1-{len(user_hand)}) of the card you wish to play: '))
+                user_card = user_hand[card_choice-1]
+                user_hand.remove(user_card)
+            except:
+                print('Try Again')
+            else:
+                break
+        print(f'''
+Your Card: {user_card[1]}{user_card[0]}
+Computer Card: {comp_card[1]}{comp_card[0]}''')
+        if user_card[2] > comp_card[2]:
+            wins += 1
+            print(f'You win the round. The score is: {wins} - {loses}')
+        elif user_card[2] < comp_card[2]:
+            loses += 1
+            print(f'You lose the round. The score is: {wins} - {loses}')
+        elif user_card[2] == comp_card[2]:
+            if suits.index(user_card[1]) > suits.index(comp_card[1]):
+                wins += 1
+                print(f'You win the round. The score is: {wins} - {loses}')
+            elif suits.index(user_card[1]) < suits.index(comp_card[1]):
+                loses += 1
+                print(f'You lose the round. The score is {wins} - {loses}')
+if wins > loses:
+    print('\n\nYou Win!')
+else:
+    print('\n\nYou Lose.')
