@@ -1,7 +1,7 @@
 # Alex W.
 # Period: 6 & 7
 # Week 4 - High Card Wins
-# Time: 
+# Time: 3hrs (way too long)
 
 import random # the backbone of this code
 # Stealing my own work (again) a good coding practice btw (Deck 3)
