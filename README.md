@@ -5,10 +5,10 @@ Each week has it's own folder.
 - Week 2 - Try/Except & Records
 - Week 3 - Creating & Edititing Lists
 - Week 4 - High Card Wins
-## In Progress
 - Week 5 - Group HW: String Methods
 - Week 5.5 - Password Checker
 - Week 7 - Dictionaries
+## In Progress
 - Week 8 - Schedule Helpwer
 - Week 8 - Pickle Practice
 - Week 10 - Dice
