@@ -1,0 +1,2 @@
+Situation: You are tasked with making a program that rolls the dice in dnd for your group.
+This would require you to make classes for the standard dice and maybe a coin.
